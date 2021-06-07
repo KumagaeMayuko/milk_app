@@ -1,0 +1,45 @@
+  <header>
+    <div class="header-logo">
+     <a href="/">milk_app</a>
+    </div>
+
+    <ul class="header-menus">
+      <li>
+        <a href="/about">自己紹介</a>
+      </li>
+     </ul>
+ 
+    <ul class="header-menus">
+       <li>
+         <a href="/nikki/index">成長記録</a>
+       </li>
+      </ul>
+  
+    <ul class="header-menus">
+       <li>
+         <a href="/movie">movie</a>
+       </li>              
+      </ul>               
+
+    <ul class="header-menus">
+        <li>              
+          <a href="/Photo">Photo</a>
+        </li>                     
+      </ul>                      
+  </header> 
+<div class="nikki-index">
+  <ul class="title-link">
+  <% @nikkis.each do |nikki| %>
+    <% str = nikki.title + " (" + nikki.created_at.strftime("%m月%d日") + ")" %>
+    <li><%= link_to(str, "/nikki/#{nikki.id}") %></li>
+  <% end %>
+  </ul>  
+  <div class="nikuk"> 
+    <img class="n1" src="/assets/肉球.png">
+   <img class="n2" src="/assets/肉球.png">
+   <img class="n4" src="/assets/肉球.png">
+   <img class="n5" src="/assets/肉球.png">
+   <img class="n6" src="/assets/肉球.png">
+  </div>
+</div>
+
